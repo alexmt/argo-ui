@@ -4,7 +4,11 @@ import * as React from 'react';
 import { DropDown, DropDownMenu } from '../src/app/shared/components';
 
 storiesOf('Dropdown', module)
-    .add('default', () => <DropDown anchor={() => <a>Click me</a>}><p>Dropdown content here</p></DropDown>)
+    .add('default', () => (
+        <div style={{ position: 'absolute', left: '500px', top: '100px' }}>
+            <DropDown anchor={() => <a>Click me</a>}><p style={{width: '100px', display: 'block'}}>Dropdown content here</p></DropDown>
+        </div>
+    ))
     .add('menu', () => (
         <DropDown isMenu={true} anchor={() => <a>Click me</a>}>
             <ul>
